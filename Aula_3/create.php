@@ -17,7 +17,6 @@
 
 ?>
 
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,6 +34,11 @@
         <input type="email" name="email" required>
 
         <input type="submit" value="Adicionar">
+        <br><br>
+
+        <input type="submit" value="Adicionar">
+
+        
 
     </form>
 
