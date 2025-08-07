@@ -1,16 +1,12 @@
 <?php
-
 include 'db.php';
 
 $id = $_GET['id'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
     $name = $_POST['name'];
     $email = $_POST['email'];
-
     $sql = "UPDATE usuarios SET name ='$name',email ='$email' WHERE id=$id";
-
     if ($conn->query($sql) === true) {
         echo "Registro atualizado com sucesso.
         <a href='read.php'>Ver registros.</a>
@@ -21,17 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $conn->close();
     exit(); 
 }
-
 $sql = "SELECT * FROM usuarios WHERE id=$id";
 $result = $conn -> query($sql);
 $row = $result -> fetch_assoc();
-
-
 ?>
-
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,9 +41,7 @@ $row = $result -> fetch_assoc();
         <input type="submit" value="Atualizar">
 
     </form>
-
     <a href="read.php">Ver registros.</a>
 
 </body>
-
 </html>
