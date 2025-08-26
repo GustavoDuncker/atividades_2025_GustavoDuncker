@@ -1,6 +1,6 @@
 <?php
 
-include 'dbG.php';
+include 'db.php';
 
 if ($_POST) {
     $nome = $_POST['nome'];

@@ -1,6 +1,6 @@
 <?php
 
-include 'dbG.php';
+include 'db.php';
 
 $result = $conn->query("SELECT * FROM autores");
 
