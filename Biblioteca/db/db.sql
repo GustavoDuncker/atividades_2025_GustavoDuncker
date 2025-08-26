@@ -1,6 +1,6 @@
-CREATE DATABASE bibliotecaDuncker
+CREATE DATABASE bibliotecaDuncker;
 
-USE bibliotecaDuncker
+USE bibliotecaDuncker;
 
 CREATE TABLE autores(
 id_autor INT AUTO_INCREMENT PRIMARY KEY,
