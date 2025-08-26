@@ -1,6 +1,6 @@
 <?php
 
-include 'db.php';
+include 'dbG.php';
 
 $id = $_GET['id'];
 
