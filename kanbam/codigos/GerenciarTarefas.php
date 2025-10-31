@@ -33,7 +33,10 @@ while ($t = $tarefas->fetch_assoc()) {
 <head>
     <meta charset="UTF-8">
     <title>Gerenciar Tarefas</title>
-    <link rel="stylesheet" href="../codigos/styleVizualizar.css">
+    <link rel="stylesheet" href="../styles/styleUsuarios.css">
+    <link rel="stylesheet" href="../styles/styleIndex.css">
+    <link rel="stylesheet" href="../styles/styleTarefas.css">
+    <link rel="stylesheet" href="../styles/styleVizualizar.css">
 </head>
 <body>
 <div class="container">

@@ -37,7 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Tarefa</title>
-    <link rel="stylesheet" href="../codigos/styleTarefas.css">
+    <link rel="stylesheet" href="../styles/styleUsuarios.css">
+    <link rel="stylesheet" href="../styles/styleIndex.css">
+    <link rel="stylesheet" href="../styles/styleTarefas.css">
+    <link rel="stylesheet" href="../styles/styleVizualizar.css">
 </head>
 <body>
 <div class="container">
