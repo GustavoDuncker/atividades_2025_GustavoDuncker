@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="../assets/styleUsuarios.css">
+    <link rel="stylesheet" href="../codigos/styleUsuarios.css">
 </head>
 <body>
     <div class="container">

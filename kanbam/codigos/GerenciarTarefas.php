@@ -1,7 +1,7 @@
 <?php
 include("db.php");
 $mensagem = "";
-// Atualização e exclusão
+
 if (isset($_GET['delete'])) {
     $id = intval($_GET['delete']);
     $conn->query("DELETE FROM Tarefa WHERE idTarefa = $id");
@@ -33,7 +33,7 @@ while ($t = $tarefas->fetch_assoc()) {
 <head>
     <meta charset="UTF-8">
     <title>Gerenciar Tarefas</title>
-    <link rel="stylesheet" href="../assets/styleVizualizar.css">
+    <link rel="stylesheet" href="../codigos/styleVizualizar.css">
 </head>
 <body>
 <div class="container">
