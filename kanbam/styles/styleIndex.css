@@ -1,17 +1,53 @@
-/* ...existing code... */
-.menu {
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f8fb;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 80px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 40px 30px 30px 30px;
     text-align: center;
-    margin-top: 40px;
+}
+
+h1 {
+    color: #28a745;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+
+.menu {
+    margin-top: 30px;
+    text-align: center;
 }
 .menu a {
     color: #28a745;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 15px;
-    font-size: 18px;
+    margin: 0 18px;
+    font-size: 1.15em;
     transition: color 0.2s;
+    padding: 8px 18px;
+    border-radius: 5px;
 }
 .menu a:hover {
-    color: #155724;
+    color: #fff;
+    background: #28a745;
 }
-/* ...existing code... */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 8px;
+    }
+    .menu a {
+        display: block;
+        margin: 12px auto;
+        width: 90%;
+    }
+}
