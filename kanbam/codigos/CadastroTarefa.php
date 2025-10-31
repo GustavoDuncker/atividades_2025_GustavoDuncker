@@ -11,14 +11,16 @@ while ($row = $result->fetch_assoc()) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario_id = $_POST["usuario"];
+    $descricao = $_POST["descricao"];
+    $setor = $_POST["setor"];
     $status = $_POST["status"];
     $prioridade = $_POST["prioridade"];
 
-    if ($usuario_id == "" || $status == "" || $prioridade == "") {
+    if ($usuario_id == "" || $descricao == "" || $setor == "" || $status == "" || $prioridade == "") {
         $mensagem = "<div class='alert error'>Todos os campos são obrigatórios!</div>";
     } else {
-        $stmt = $conn->prepare("INSERT INTO Tarefa (Usuario_idUsuario, Status, Prioridade) VALUES (?, ?, ?)");
-        $stmt->bind_param("iss", $usuario_id, $status, $prioridade);
+        $stmt = $conn->prepare("INSERT INTO Tarefa (Usuario_idUsuario, Descricao, Setor, Status, Prioridade) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("issss", $usuario_id, $descricao, $setor, $status, $prioridade);
 
         if ($stmt->execute()) {
             $mensagem = "<div class='alert success'>Tarefa cadastrada com sucesso!</div>";
@@ -52,11 +54,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php endforeach; ?>
         </select>
 
+        <label>Descrição:</label>
+        <input type="text" name="descricao" required>
+
+        <label>Setor:</label>
+        <input type="text" name="setor" required>
+
         <label>Status:</label>
         <select name="status" required>
-            <option value="pendente">Pendente</option>
+            <option value="a fazer">A Fazer</option>
             <option value="fazendo">Fazendo</option>
-            <option value="finalizado">Finalizado</option>
+            <option value="pronto">Pronto</option>
         </select>
 
         <label>Prioridade:</label>
@@ -70,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 
     <p style="text-align:center; margin-top:15px;">
-        <a href="cadastro_usuario.php">Voltar ao cadastro de usuários</a>
+        <a href="../index.php">Voltar ao menu principal</a>
     </p>
 </div>
 </body>

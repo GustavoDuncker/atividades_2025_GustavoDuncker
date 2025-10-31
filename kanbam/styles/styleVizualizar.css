@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f8fb;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 30px 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.kanban {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.kanban-col {
+    flex: 1;
+    background: #f0f4fa;
+    border-radius: 8px;
+    padding: 18px 12px;
+    min-width: 300px;
+}
+
+.kanban-col h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 18px;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+.tarefa {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    padding: 14px 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s;
+}
+
+.tarefa:hover {
+    box-shadow: 0 4px 16px rgba(0,123,255,0.10);
+}
+
+.tarefa .info {
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #444;
+}
+
+.tarefa .prioridade-baixa {
+    color: #28a745;
+    font-weight: bold;
+}
+.tarefa .prioridade-media {
+    color: #ffc107;
+    font-weight: bold;
+}
+.tarefa .prioridade-alta {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.tarefa .acoes {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.tarefa button, .tarefa a {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.tarefa button:hover, .tarefa a:hover {
+    background: #0056b3;
+}
+.tarefa .excluir {
+    background: #dc3545;
+}
+.tarefa .excluir:hover {
+    background: #a71d2a;
+}
+
+.alert {
+    margin: 20px auto;
+    padding: 12px;
+    border-radius: 4px;
+    text-align: center;
+    max-width: 500px;
+}
+.alert.success {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.link {
+    text-align: center;
+    margin-top: 20px;
+}
+.link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.link a:hover {
+    text-decoration: underline;
+}
